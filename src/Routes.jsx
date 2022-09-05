@@ -23,7 +23,7 @@ const App = () => {
 			once: true,
 		})
 	}, [])
-
+	// asd
 	return (
 		<AppContextProvider>
 			<BrowserRouter>
