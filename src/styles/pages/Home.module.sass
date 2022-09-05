@@ -1,0 +1,727 @@
+@import '../resources/variables'
+
+// Home
+.Hero_Container_Fluid
+  // background-image: url('../resources/images/hero-background.png')
+  // background-repeat: no-repeat
+  // background-size: cover
+  // background-position: center
+  position: relative
+
+
+
+.c
+  position: absolute
+  left: 0
+  top: 0
+  width: 100% 
+  display: block
+  z-index: 1000
+  pointer-events: none
+ 
+
+.diagram 
+  display: inline-block
+  width: 8em
+  height: 8em
+ 
+.box
+  display: inline-block
+  width: 30rem  
+  height: 30rem
+  
+
+
+  
+.threed
+  margin: 1em auto
+  max-width: 500px  
+  font-size: xx-large
+  display: block
+ 
+
+
+.Hero
+  min-height: 100vh
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_Banner
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &_Title_Container
+    width: 60%   
+  &_Title
+    margin: 0
+    color: $cyan
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+    line-height: 90px
+    padding-bottom: 1rem
+    &_Variable
+      opacity: 1
+  &_Caption
+    margin: 0
+    color: $gray
+    font-family: 'Font-Condensed-Regular', sans-serif
+    font-size: 26px
+    font-weight: 300
+    &_Highlight
+      font-family: 'Font-Condensed-Bold', sans-serif
+  &_Link
+    margin-top: 30px
+    border-radius: 10px
+    padding: 18px 26px
+    background-color: $cyan    
+    display: inline-block
+    text-transform: uppercase
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 28px
+    transition: all 0.3s ease
+    &:hover
+      color: $white
+      background-color: $cyan-dark
+  &_Image
+    max-width: 50%
+    width: 100%
+
+.Hero_Bottom_Detail
+  position: absolute
+  top: 100%
+  left: calc(50% - 17px)
+  z-index: 1
+
+.Visor_Container
+  padding-bottom: 120px
+
+.Visor
+  aspect-ratio: 66 / 37
+  background-image: url('../resources/images/visor.png')
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &_Text
+    color: $white
+    font-family: 'Font-Condensed-Regular', sans-serif
+    font-size: 28px
+    font-weight: 300
+    &_Highlight
+      color: $cyan-light
+      font-family: 'Font-Condensed-Bold', sans-serif
+  &_Button
+    height: 100px
+    width: 100px
+    border-radius: 20px
+    background-color: $gray
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    bottom: -50px
+    left: calc(50% - 50px)
+    transform: rotate(45deg)
+    transition: all 0.5s ease
+    &:hover
+      background-color: $gray-dark
+    &_Icon
+      width: 40px
+      margin-left: 8px
+      margin-bottom: 5px
+      filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.1))
+      transform: rotate(-45deg)
+    
+  &_Data
+    padding-left: 5% !important
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    &_Title
+      margin: 0
+      color: $cyan
+      font-family: "Font-Bold", sans-serif
+      font-size: 20px
+    &_Text
+      margin: 0 0 1.5rem
+      font-size: 18px
+
+
+// Servicios
+.Services_Container_Fluid
+  background: linear-gradient(180deg, #368290 0%, #3B8F9F 2.08%, #419FB1 6.77%)
+  position: relative
+
+.Services
+  padding: 100px 0
+  text-align: center
+  &_Title
+    color: $white
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Caption
+    max-width: 1050px
+    margin: 0 auto
+    color: $white
+    font-size: 28px
+    font-family: 'Font-Regular', sans-serif
+    font-weight: 300
+
+
+.ServicesCards > div:nth-child(2)
+  margin-top: 200px
+
+.ServiceCard
+  aspect-ratio: 13 / 6
+  max-height: 300px
+  margin-bottom: 50px
+  display: flex
+  position: relative
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3)
+  border-radius: 1rem
+  &_Image_Container
+    width: 50%
+    height: 100%
+    border-radius:1rem 0 0 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    background-size: cover
+    background-position: center
+    &:hover
+      .ServiceCard_Hover_Image
+        opacity: 1
+      .ServiceCard_Image
+        opacity: 0
+  &_Image_Container_1
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-1.png')
+  &_Image_Container_2
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-2.png')
+  &_Image_Container_3
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-3.png')
+  &_Image_Container_4
+    @extend .ServiceCard_Image_Container
+    background-image: url('../resources/images/service-card-4.png')
+  &_Image
+    width: 40%
+    transition: opacity .4s ease-in-out
+  &_Hover_Image
+    width: 50%
+    height: 100%
+    border-radius: 5px 0 0 5px
+    object-fit: cover
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    opacity: 0
+    transition: opacity .4s ease-in-out
+  &_Text_Container
+    width: 50%
+    height: 100%
+    border-radius: 0 1rem 1rem 0
+    padding: 25px 20px
+    background-color: $white
+    text-align: left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+  &_Title
+    margin-top: 0
+    margin-bottom: 1rem
+    color: $gray-dark
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 24px
+  &_Text
+    font-size: 16px
+    font-weight: 300
+  &_Link
+    color: $gray-dark
+    font-family: 'Font-Bold', sans-serif
+    font-size: 20px  
+    transition: all 0.3s ease-in-out  
+    &:hover
+      color: $cyan
+  &_Detail_White
+    height: 20px
+    position: absolute
+    top: calc(50% - 10px)
+    right: -25px
+    transform: rotate(-90deg)
+  &_Detail_Dark
+    width: 20px
+    position: absolute
+    top: calc(50% - 10px)
+    left: -18px
+
+
+// Sectors
+.Sectors_Container_Fluid
+  background: linear-gradient(180deg, #1F1F1F 0%, #2C2C2C 3.65%, #3A3A3A 29.69%)
+
+ 
+
+.Sector_Card_Container
+  margin-bottom: 3rem
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(2, 1fr)
+  justify-content: space-between
+  align-items: center
+  grid-gap: 50px
+
+.Sectors
+  padding: 100px 0 3rem
+  text-align: center
+  &_Title
+    margin-bottom: 1rem
+    color: $white
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Caption
+    margin-bottom: 60px
+    color: $white
+    font-family: 'Font-Regular', sans-serif
+    font-size: 28px
+    font-weight: 300
+
+.SectorCard
+  width: 100%
+  height: 100%
+  border: 2px solid $cyan-light
+  border-radius: 1rem
+  padding: 20px
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4)
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 150px max-content auto
+  flex-direction: column
+  justify-items: center
+  align-items: flex-start
+  color: $white
+  p
+    margin: 20px 0 0
+    text-align: justify
+    hyphens: auto
+    -webkit-hyphens: auto
+    // word-spacing: -0.05em    
+  &_Image
+    width: 40%   
+  &_Title
+    margin: 10px 0 0
+    font-size: 25px
+    color: $cyan-light
+
+.Sector_Swiper
+  display: none
+  padding: 0 3rem 3rem !important
+.Sector_Swiper_Prev, .Sector_Swiper_Next
+  position: absolute
+  width: 19px
+  height: 30px
+  z-index: 10
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+  top: calc(50% - 30px) !important
+  img
+    width: 100%
+.Sector_Swiper_Prev
+  left: 10px
+.Sector_Swiper_Next
+  right: 10px
+.Sector_Slide
+  height: 300px !important
+  display: flex
+  justify-content: center
+
+
+// Idea
+.Idea
+  padding-bottom: 1rem
+  background: linear-gradient(180deg, #DDDDDD 0%, #F0F0F0 3.65%, #FFFFFF 29.69%)
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-content: center
+  position: relative 
+  &_ImageContainer
+    display: grid
+    flex-direction: row
+    align-content: center
+    justify-content: center
+    justify-items: center    
+  &_Text_Container
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    position: absolute
+    top: 8rem
+    bottom: 0px
+    left: 0px
+    right: 0px
+    z-index: 3
+  &_Title
+    margin-bottom: 0
+    color: $cyan
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 60px
+  &_Image
+    transform: rotate(180deg)
+    grid-column: 1/2
+    grid-row: 1/2
+    opacity: 0.5   
+    z-index: 0
+    
+  &_Button
+    // width: 190px
+    // height: 60px
+    border-radius: 12px
+    padding: 18px 18px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: radial-gradient(at 50% 0%, #55CBD8 10px,#55CBD8 30px, #419FB1  50%)
+    background-size: 200% 200%
+    background-position: 50% 100%
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25)
+    text-transform: uppercase
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 26px
+    transition: all 0.5s ease
+    &:hover      
+      color: $white
+      background-position: 50% 0% 
+     
+  &_lamparaP
+    grid-column: 1/2
+    grid-row: 1/2
+    opacity: 0
+    z-index: 2
+    // filter: contrast(80%)
+    filter: saturate(85%) contrast(110%)
+    transition: all 0.5s ease
+  
+  &_Text
+    margin-top: 0
+    font-size: 28px
+  
+      
+      
+ 
+      
+ 
+
+      
+
+
+
+// Contact
+.Contact_Fluid_Container
+  display: grid
+  
+  justify-content: center
+  align-items: flex-end
+  align-content: center
+
+
+.background
+  display: inline-block
+  grid-column: 1/2
+  grid-row: 1/2
+  position: relative
+  left: 0
+  top: 0
+  width: 100vw
+  height: 50rem
+  background: rgb(32,108,150)
+  background: linear-gradient(0deg, rgba(32,108,150,1) 0%, rgba(37,113,154,1) 30%, rgba(157,234,245,1) 70%, rgba(255,255,255,1) 100%)
+
+.Contact  
+  display: flex
+  grid-column: 1/2
+  grid-row: 1/2 
+  justify-content: center
+  align-items: center
+  margin-bottom: 4rem
+
+@media (max-width: 1440px)
+  .Visor
+    &_Button
+      bottom: -70px
+
+  .Contact
+    margin-top: 250px
+
+@media (max-width: 1200px)
+  .Visor
+    &_Button
+      height: 90px
+      width: 90px
+      left: calc(50% - 45px)
+  .ServiceCard
+    &_Text_Container
+      padding: 20px 16px
+    &_Title
+      margin-bottom: 1rem
+      font-size: 23px
+    &_Text
+      font-size: 16px
+    &_Link
+      font-size: 18px
+  .Sector_Card_Container
+    grid-gap: 35px
+
+@media (max-width: 992px)
+  .Hero
+    &_Title
+      font-size: 40px
+      line-height: 60px
+    &_Caption
+      font-size: 20px
+    &_Link
+      font-size: 18px
+  .Visor_Container
+    display: flex
+    flex-direction: column
+  .Visor
+    margin: 20px 0 100px
+    &_Button
+      height: 120px
+      width: 120px
+      border-radius: 18px
+      bottom: -80px
+      left: calc(50% - 60px)
+    &_Data
+      padding-left: 0 !important
+      padding-right: 0 !important
+  .Visor_Data_Item
+    margin-bottom: 20px
+  .Services
+    &_Title
+      font-size: 45px
+    &_Caption
+      font-size: 24px
+  .ServicesCards > div:nth-child(2)
+    margin-top: 0
+  .ServicesCards > div > div:nth-child(odd)
+    margin-right: 20px
+  .ServicesCards > div > div:nth-child(even)
+    margin-left: 20px
+  .ServiceCard
+    margin: 0 0 50px
+  .Sector_Card_Container
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    grid-gap: 20px
+  .Sectors
+    padding: 75px 0
+    &_Title
+      font-size: 45px
+    &_Caption
+      margin-bottom: 50px
+      font-size: 24px
+  .SectorCard
+    padding: 16px
+  .Idea
+    &_Title
+      font-size: 45px
+    &_Text
+      margin-top: 0
+      font-size: 24px
+  .Contact
+    form
+      width: 100%
+
+@media (max-width: 768px)
+  .Hero
+    margin-top: 80px
+    &_Banner
+      flex-direction: column
+    &_Title_Container
+      width: 100%
+      padding-top: 30px
+      text-align: center
+    &_Image
+      margin: 1rem 0
+      max-width: 465px
+  .Visor
+    &_Container
+      padding-bottom: 60px
+    &_Button
+      height: 100px
+      width: 100px
+      border-radius: 18px
+      bottom: -80px
+      left: calc(50% - 50px)
+  .Services
+    padding: 60px 0
+  .ServiceCard
+    &_Text_Container
+      padding: 15px 15px
+  .Sectors
+    padding: 60px 0
+  .SectorCard
+    grid-template-rows: 100px max-content auto
+    &_Image
+      width: unset
+      height: 90%
+  .Contact_Fluid_Container
+    min-height: fit-content
+    padding-bottom: 0 !important
+  .Contact
+    height: fit-content
+
+@media (max-width: 576px)
+  .Hero
+    &_Title
+      font-size: 30px
+      
+      line-height: 50px
+    &_Caption
+      font-size: 18px
+    &_Link
+      font-size: 18px
+  .Visor
+    width: calc(100% + 60px) !important
+    max-width: unset !important
+    margin: 0 -30px 100px
+    &_Button
+      height: 80px
+      width: 80px
+      border-radius: 16px
+      bottom: -50px
+      left: calc(50% - 40px)
+      &_Icon
+        width: 22px
+        top: calc(50% - 18px)
+        left: calc(50% - 10px)
+  .Services
+    &_Title
+      font-size: 30px
+    &_Caption
+      font-size: 20px
+  .ServiceCard
+    &_Text_Container
+      padding: 10px 8px
+    &_Title
+      font-size: 20px
+    &_Text
+      font-size: 14px
+  .Sectors
+    &_Title
+      font-size: 30px
+     
+    &_Caption
+      margin-bottom: 50px
+      font-size: 20px
+  .SectorCard
+    aspect-ratio: 19 /  17
+    height: unset
+    grid-template-rows: max-content max-content auto
+    &_Image
+      width: 30%
+      height: unset 
+      margin-bottom: 13px   
+    &_Title
+      margin-top: 0px
+      line-height: 30px
+    p
+      font-size: 14px
+      margin-top: 10px
+  .Sector_Swiper
+    display: block
+  .Idea
+    &_Title
+      font-size: 30px
+      text-align: center
+    &_Text
+      margin-top: 0
+      font-size: 20px
+
+@media (max-width: 425px)
+  .Visor
+    &_Button
+      height: 70px
+      width: 70px
+      border-radius: 14px
+      bottom: -50px
+      left: calc(50% - 35px)
+  .ServiceCard
+    aspect-ratio: unset
+    max-height: 300px
+    height: fit-content
+    &_Image_Container
+      width: 50%
+      height: unset
+    //   border-radius: 5px 0 0 5px
+    //   display: flex
+    //   justify-content: center
+    //   align-items: center
+    //   background-size: cover
+    // &_Image_Container_1
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-1.png')
+    // &_Image_Container_2
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-2.png')
+    // &_Image_Container_3
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-3.png')
+    // &_Image_Container_4
+    //   @extend .ServiceCard_Image_Container
+    //   background-image: url('../resources/images/service-card-4.png')
+    // &_Text_Container
+    //   width: 50%
+    //   height: 100%
+    //   border-radius: 0 5px 5px 0
+    //   padding: 25px 20px
+    //   background-color: $white
+    //   text-align: left
+    //   display: flex
+    //   flex-direction: column
+    //   justify-content: space-between
+    //   align-items: flex-start
+    // &_Title
+    //   margin-top: 0
+    //   margin-bottom: 1rem
+    //   color: $gray-dark
+    //   font-family: 'Font-Condensed-Bold', sans-serif
+    //   font-size: 26px
+    // &_Text
+    //   font-size: 18px
+    //   font-weight: 300
+    // &_Link
+    //   color: $gray-dark
+    //   font-family: 'Font-Bold', sans-serif
+    //   font-size: 20px
+    //   &:hover
+    //     color: $cyan
+  .Sector_Swiper
+    padding: 0 2rem 3rem !important
+  .Sector_Swiper_Prev
+    left: 0px
+  .Sector_Swiper_Next
+    right: 0px
+  .Sector_Slide
+    height: 300px !important
+
+@media (max-width: 385px)
+  .Visor
+    &_Button
+      height: 70px
+      width: 70px
+      border-radius: 14px
+      bottom: -50px
+      left: calc(50% - 35px)

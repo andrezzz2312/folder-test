@@ -1,0 +1,221 @@
+@import '../resources/variables'
+
+.Hero_Container_Fluid
+  padding: 30px 0
+  background-color: $cyan
+  position: relative
+
+.Hero
+  margin-top: 80px
+  min-height: 100vh
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_Image
+    width: 95%
+  &_Title
+    margin: 0
+    color: $white
+    font-size: 60px
+  &_Text
+    margin-top: 1rem
+    color: $white
+    font-family: 'Font-Regular', sans-serif
+    font-size: 30px
+    line-height: 1.25em
+  &_Bottom_Detail
+    position: absolute
+    top: 100%
+    left: calc(50% - 17px)
+    z-index: 1
+
+.Features_Container_Fluid
+  padding: 50px 0
+  background: linear-gradient(180deg, #DBDBDB 0%, #E9E9E9 3.12%, #F9F9F9 13.02%, #FFFFFF 24.48%)
+  position: relative
+
+.Features
+  min-height: 100vh
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_Title
+    margin-top: 0
+    margin-bottom: 4rem !important
+    color: $magenta
+    font-size: 54px
+  &_Items_Container
+    display: flex
+    flex-direction: column
+    row-gap: 50px
+  &_Item
+    border-radius: 20px
+    padding: 20px
+    background-color: $white
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3)
+  &_Text_Container
+    display: flex
+    flex-direction: column
+  &_Text
+    margin: 0
+    color: $gray
+    font-size: 20px
+    &_Magenta
+      @extend .Features_Text
+      color: $magenta
+      font-weight: 700
+    &_Cyan
+      @extend .Features_Text
+      color: $cyan
+      font-weight: 700
+    &_Orange
+      @extend .Features_Text
+      color: $orange
+      font-weight: 700
+  &_Image_Container
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    position: relative
+  &_Image
+    width: 100%
+    position: absolute
+    right: -20%
+    bottom: -20%
+
+.Work_Container_Fluid
+  padding: 30px 0
+  background-image: linear-gradient(180deg, #1F1F1F 0%, #2C2C2C 3.65%, #3A3A3A 29.69%)
+
+.Work
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  &_Image
+    width: 100%
+  &_Title
+    color: $orange
+    font-size: 60px
+  &_Text
+    margin-bottom: 3rem
+    color: $white
+    font-size: 30px
+  &_Button
+    // width: 190px
+    // height: 60px
+    border-radius: 12px
+    padding: 18px 18px
+    background: radial-gradient(at 50% 0%, #55CBD8 10px,#55CBD8 30px, #419FB1  50%)
+    background-size: 200% 200%
+    background-position: 50% 100%
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $white
+    display: inline-block
+    font-family: 'Font-Condensed-Bold', sans-serif
+    font-size: 26px
+    text-transform: uppercase
+    transition: all 0.5s ease
+    &:hover
+      color: $white
+      background-position: 50% 0%
+
+@media (max-width: 1024px)
+  .Hero
+    margin-top: 80px
+    min-height: 70vh
+    &_Title
+      font-size: 45px
+    &_Text
+      margin: 0
+      font-size: 25px
+  .Features
+    &_Title
+      font-size: 45px
+    &_Text
+      font-size: 18px
+  .Work
+    &_Title
+      font-size: 45px
+    &_Text
+      font-size: 25px
+    &_Button
+      font-size: 24px
+
+@media (max-width: 992px)
+  .Hero_Container_Fluid
+    padding-bottom: 5rem !important
+  .Features
+    &_Title
+      margin-bottom: 1rem !important
+      text-align: center
+    &_Image_Container
+      min-height: 300px
+      justify-content: center
+    &_Image
+      width: 60%
+      right: 15%
+      z-index: 100
+  .Work
+    &_Image_Container
+      padding: 0 !important
+    &_Title
+      text-align: center
+    &_Text
+      text-align: center
+    &_Button
+      margin: 0 auto
+
+@media (max-width: 768px)
+  .Hero
+    &_Image
+      width: 80%
+      margin-left: 20% !important
+  .Features
+    &_Image_Container
+      min-height: 200px
+    &_Image
+      width: 60%
+      right: 15%
+      bottom: -10%
+      z-index: 100
+
+@media (max-width: 576px)
+  .Hero
+    &_Title
+      font-size: 30px
+    &_Text
+      font-size: 20px
+  .Features
+    &_Title
+      margin-top: 100px !important
+      font-size: 30px
+    &_Text
+      font-size: 16px
+    &_Items_Container
+      padding: 0 16px
+      gap: 20px
+    &_Image_Container
+      min-height: 50px
+    &_Image
+      width: 66%
+      right: 12%
+      bottom: -80px
+  .Work
+    &_Title
+      font-size: 30px
+    &_Text
+      padding: 0 16px
+      font-size: 20px
+    &_Button
+      font-size: 18px
+
+@media (max-width: 576px)
+  .Features
+    &_Image_Container
+      min-height: 50px
+    &_Image
+      bottom: -50px

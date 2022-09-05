@@ -1,0 +1,117 @@
+@import '../resources/variables'
+
+.Container_Fluid
+  background-image: url('../resources/images/contact-background.png')
+  background-size: cover
+  background-position: center
+  position: relative
+
+.Container
+  margin-top: 60px
+  min-height: 100vh
+  form
+    width: 100%
+
+.Row
+  min-height: 100vh
+  display: flex
+  align-items: center
+
+.Title
+  margin: 0
+  color: $cyan
+  font-size: 60px
+
+.Text
+  margin-top: 2.5rem
+  color: $gray
+  font-family: 'Font-Condensed-Regular', sans-serif
+  font-size: 30px
+  font-weight: 300
+
+.Data_Container
+  margin-bottom: 3rem
+  display: grid
+  grid-template-columns: 25px 1fr
+  column-gap: 6px
+  row-gap: 20px
+  path
+    fill: $cyan
+
+.Data_Item
+  color: $gray
+  &:hover
+    color: $cyan-dark
+
+.Data_Networks
+  display: flex
+  align-items: center
+  column-gap: 15px
+
+.Data_Network_Item
+  width: 34px
+  height: 34px
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $white
+  font-size: 22px
+  &:hover
+    color: $white
+    opacity: .8
+  &_Facebook
+    @extend .Data_Network_Item
+    background-color: #419FB1
+  &_Twitter
+    @extend .Data_Network_Item
+    background-color: #419FB1
+  &_Instagram
+    @extend .Data_Network_Item
+    background-color: #F73181
+  &_TikTok
+    @extend .Data_Network_Item
+    background-color: #3A3A3A
+  &_Linkedin
+    @extend .Data_Network_Item
+    background-color: #419FB1
+  &_YouTube
+    @extend .Data_Network_Item
+    background-color: #F73181
+
+@media (max-width: 1024px)
+  .Title
+    font-size: 45px
+  .Text
+    font-size: 25px
+
+
+@media (max-width: 768px)
+  .Row
+    flex-direction: column-reverse
+  .Data
+    padding-top: 30px
+    padding-bottom: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    position: relative
+    z-index: 2
+    &:after
+      content: ''
+      margin: 0 -100% -3rem
+      width: calc(100% + 200%)
+      height: calc(100% + 3rem)
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: -1
+      background-color: $white
+
+@media (max-width: 576px)
+  .Title
+    font-size: 30px
+  .Text
+    font-size: 20px

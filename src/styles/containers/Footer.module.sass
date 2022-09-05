@@ -1,0 +1,87 @@
+@import "../resources/variables"
+
+.Container_Fluid
+  padding: 40px 0 100px
+  background-color: $cyan
+  color: $white
+
+.Title
+  margin-top: 0
+  margin-bottom: 10px
+  font-family: "Font-Condensed-Bold", sans-serif
+  font-size: 34px
+
+.Caption
+  margin-top: 0
+
+  font-family: "Font-Condensed-Bold", sans-serif
+  font-weight: 300
+  font-size: 28px
+
+.Main_Data_Container
+  position: relative
+  &::after
+    content: ''
+    width: 1px
+    height: 100%
+    background: $white
+    position: absolute
+    top: 0
+    right: 30px
+
+.Data_Container
+  margin: 1.5rem 0
+  display: grid
+  grid-template-columns: 25px 1fr
+  column-gap: 6px
+  row-gap: 20px
+
+.Data_Networks
+  margin-top: 30px
+  display: flex
+  align-items: center
+  column-gap: 15px
+
+.Data_Network_Item
+  width: 34px
+  height: 34px
+  border-radius: 50%
+  background-color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $cyan
+  font-size: 22px
+  &:hover
+    background-color: $gray-light
+    color: $cyan
+
+.Links_Container
+  display: flex
+  flex-direction: column
+  row-gap: 20px
+
+@media (max-width: 1200px)
+  .Main_Data_Container
+    &::after
+      right: 10px
+
+@media (max-width: 992px)
+  .Main_Data_Container
+    position: relative
+    &::after
+      content: ''
+      width: 100%
+      height: 1px
+      background: $white
+      position: absolute
+      top: unset
+      bottom: 0
+      left: 0
+      right: 0
+
+@media (max-width: 576px)
+  .Container_Fluid
+    padding: 40px 0 0
+    background-color: $cyan
+    color: $white
