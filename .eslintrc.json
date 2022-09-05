@@ -23,7 +23,7 @@
 		// "linebreak-style": ["error", "unix"],
 		"linebreak-style": 0,
 		"quotes": ["error", "single"],
-		"semi": ["error", "never"],
+		// "semi": ["error", "never"],
 		"react/prop-types": [0]
 	}
 }
